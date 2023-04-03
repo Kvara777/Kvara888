@@ -1,5 +1,5 @@
 module.exports={
-    token:"6113932124:AAHvLp0T7inTafKWiCaFOqjtY2IwKevAOgY",
+    token:"6010099111:AAHUXziXH4IygjocEjJG_fJYuztDq4Kjuh0",
     mongo_url:"mongodb://mongo:NI6NsJflDdGile1OxSQv@containers-us-west-42.railway.app:6926",
     admins:[787953355],
     curr:"USDT",
