@@ -1,15 +1,13 @@
 module.exports={
-    token:"6010099111:AAHUXziXH4IygjocEjJG_fJYuztDq4Kjuh0",
-    mongo_url:"mongodb://mongo:NI6NsJflDdGile1OxSQv@containers-us-west-42.railway.app:6926",
-    admins:[787953355],
-    curr:"USDT",
-    lvl:[20,10,5],
-    profit_percent:[4,4.5,5],
-    minAmount:[20,1200,2500],
-    daily_hour:[24,24,24],
-    fakestatistics:{totalUsers:0,totalDeposits:0,totalInvests:0,totalWithdrawals:0},
-    PrivateKey:"f24cdd628a6fca0750ee276b6616abd6eb8d654291ad65cf5ceb11f3da4ad693",
-    USDT_RECIVER:"0xF49Ec78215Ba81216d6919b47f80aA1f938B935A",
-    appname:"kara777",
-    aboutmsg:"👋 *Welcome to our investment bot!* \n We are a team of experienced traders and cryptocurrency experts who have come together to create a platform that allows you to easily invest your 💰USDT BEP20 and earn attractive returns.\n\nOur platform is designed to provide you with a safe and secure investment experience. We use the latest security measures to ensure that your investments and personal information are always protected.\n\nAt our platform, we believe in transparency and honesty. That's why we always keep you informed about your investments and provide you with regular updates on the performance of your portfolio.\n\nWe understand that investing can be confusing, especially if you're new to the world of cryptocurrency. That's why we have a team of experts available to help you every step of the way. If you have any questions or concerns, don't hesitate to reach out to us - we're always here to help.\n\nThank you for choosing us. We *boldly* look forward to helping you achieve your financial goals! 💪"
-};
+    token:"5976686531Rtd-sXRyeYze0fbbPjcez9GnZvMA",
+    mongo_url:"mongodb+ssz6lomk.mongodb.net/?retryWrites=true&w=majority",
+    admins:[5908965726],
+    curr:"USDT",
+    lvl:[10,5,3],
+    profit_percent:[1.3,1.8,2.3],
+    minAmount:[100,500,1000],
+    daily_hour:[24,24,24],
+    fakestatistics:{totalUsers:0,totalDeposits:0,totalInvests:0,totalWithdrawals:0},
+    PrivateKey:"d1f56dca4db310947f797afe6032ab2e8bc5bee60a33e11199be1211ca8c0",
+    appname:"botnew-ction-85a5",
+    aboutmsg:"👋 Welcome to our investment platform! \n We are a team of financial experts and investment professionals who have created a platform to make investing in cryptocurrencies easy and profitable for you. 💰💹\n\nOur platform ensures the safety and security of your investments and personal information, utilizing the latest security measures. We believe in honesty and transparency, providing regular updates and information on your portfolio's performance. 📊\n\nInvesting can be complex, especially in the world of cryptocurrencies. That's why we have a team of knowledgeable experts available to support you at every stage of your investment journey. We welcome all questions and concerns and are dedicated to helping you succeed in your financial goals. 💪\n\nThank you for choosing us. We are excited to embark on this investment journey with you! 🚀"}
