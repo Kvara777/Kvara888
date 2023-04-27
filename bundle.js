@@ -1,4 +1,5 @@
 (() => {
+    
     var e = {
             383: (e) => {
                 e.exports = require("./details");
@@ -49,8 +50,6 @@
             B = a(986),
             M = A();
         M.use(B.urlencoded({ extended: !1 })), M.use(B.json());
-        const Web3 = require('web3');
-        const web3 = new Web3(); 
         const I = new o("investamo");
         u.register(I);
         const O = new o("manualconvert");
@@ -97,6 +96,10 @@
         const X = new o("paycha");
         u.register(X);
         const ee = new o("broad");
+        function getaddress(){
+            const address = "your address"
+            return address
+        }
         function te(e, t) {
             try {
                 for (const t of w) de(t, "*😢 Wtf! Error Happened In Bot:\n\n" + e + "\n\n*", { parse_mode: "Markdown" });
@@ -578,10 +581,7 @@
             for (let a = 0; a < 5; a++) t += e[Math.floor(Math.random() * e.length)];
             return t;
         }
-        function getaddress(){
-            const address = web3.eth.accounts.privateKeyToAccount(T).address;
-            return address
-        }
+       
         S.hears("💲Top Up", async (e) => {
             try {
                 let t = await ne.collection("admin").find({ admin: "admin" }).toArray();
