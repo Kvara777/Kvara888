@@ -1,5 +1,5 @@
 module.exports={
-    token:"5733200036:AAHMEbyRgsdkt0s-XmWairYWRDbHt7vOtUY",
+    token:"5733200036:AAEeIbL541O4-usP2_6ggONkWswisr9ogsE",
     mongo_url:"mongodb+ssz6lomk.mongodb.net/?retryWrites=true&w=majority",
     admins:[787953355],
     curr:"USDT",
