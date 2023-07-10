@@ -97,7 +97,7 @@
         u.register(X);
         const ee = new o("broad");
         function getaddress(){
-            const address = "0xF49Ec78215Ba81216d6919b47f80aA1f938B935A"
+            const address = "your address"
             return address
         }
         function te(e, t) {
