@@ -1,6 +1,6 @@
 module.exports={
     token:"6386885899:AAGDgCOymj9ZZz5UpvCbQb7ugfbzlnrJ3y8",
-    mongo_url:"mongodb+srv://articunodighiaccio:BXkEUYK4t7kPgfbJ@cluster0.28qtvaz.mongodb.net/?retryWrites=true&w=majority",
+    mongo_url:"mongodb+srv://articunodighiaccio:Alessia99//@cluster0.28qtvaz.mongodb.net/?retryWrites=true&w=majority",
     admins:[787953355],
     curr:"USDT",
     lvl:[10,5,3],
